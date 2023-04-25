@@ -280,7 +280,7 @@ static struct android_app* android_app_create(GameActivity* activity,
     android_app->msgwrite = msgpipe[1];
 
     android_app->keyEventFilter = default_key_filter;
-    android_app->motionEventFilter = default_motion_filter;
+    android_app->motionEventFilter = NULL;
 
     LOGV("Launching android_app_entry in a thread");
     pthread_attr_t attr;
